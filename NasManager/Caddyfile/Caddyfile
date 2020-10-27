@@ -1,0 +1,7 @@
+:31512
+root E:\caddy\
+gzip
+browse
+filebrowser / /file {
+database /filebrowser.db
+}

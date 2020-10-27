@@ -1,0 +1,20 @@
+#创建并初始化数据库
+filebrowser -d E:/NasManager/filebrowser.db config init
+
+#设置filebrowser监听地址
+filebrowser -d E:/NasManager/filebrowser.db config set --address 0.0.0.0
+
+#设置filebrowser监听端口
+filebrowser -d E:/NasManager/filebrowser.db config set --port 8099
+
+#设置filebrowser语言环境
+filebrowser -d E:/NasManager/filebrowser.db config set --locale zh-cn
+
+#设置filebrowser日志文件位置
+filebrowser -d E:/NasManager/filebrowser.db config set --log /data/filebrowser/logs/filebrowser.log
+
+#设置filebrowser Web控制台界面账号和密码
+filebrowser -d E:/NasManager/filebrowser.db users add root 123456 --perm.admin
+
+#启动filebrowser
+filebrowser -d E:/NasManager/filebrowser.db
